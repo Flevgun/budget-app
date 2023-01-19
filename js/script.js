@@ -1,5 +1,29 @@
 "use strict";
 let money, time;
+
+let startBtn = document.querySelector("#start"),
+  budgetValue = document.querySelector(".budget-value"),
+  dayBudgetValue = document.querySelector(".daybudget-value"),
+  levelValue = document.querySelector(".level-value"),
+  expensesValue = document.querySelector("expenses-value"),
+  optionalexpensesValue = document.querySelector(".optionalexpenses-value"),
+  incomeValue = document.querySelector(".income-value"),
+  monthsavingsValue = document.querySelector(".monthsavings-value"),
+  yearsavingsValue = document.querySelector(".yearsavings-value"),
+  yearValue = document.querySelector(".year-value"),
+  monthValue = document.querySelector(".month-value"),
+  dayValue = document.querySelector(".day-value"),
+  expensesInputs = document.querySelectorAll(".expenses-item"),
+  optionalExpensesInputs = document.querySelectorAll(".optionalexpenses-item"),
+  chooseIncomeInput = document.querySelector(".choose-income"),
+  savingsCheckbox = document.querySelector("#savings"),
+  sumInput = document.querySelector("#sum"),
+  percentInput = document.querySelector("#percent"),
+  buttons = document.getElementsByTagName("button"),
+  acceptBtn1 = document.querySelectorAll(".expenses-item-btn"),
+  acceptBtn2 = document.querySelectorAll(".optionalexpenses-btn"),
+  countBtn = document.querySelectorAll(".count-budget-btn");
+
 function start() {
   time = prompt("Введите дату в формате YYYY-MM-DD", 0);
 
@@ -19,7 +43,7 @@ let appData = {
   chooseExpenses: function () {
     for (let i = 0; i < 2; i++) {
       let a = prompt("Обязательная статья на расходов в этом месяце?", "");
-      let b = prompt("Во сколько это обойдется?", 0);
+      let b = prompt("Во сколько это обойдется?", "");
 
       if (
         typeof a === "string" &&
@@ -85,8 +109,8 @@ let appData = {
   },
 };
 
-for (let key in appData) {
-  console.log(
-    "Наша программа включает в себя данные: " + key + ": " + appData[key]
-  );
-}
+// for (let key in appData) {
+//   console.log(
+//     "Наша программа включает в себя данные: " + key + ": " + appData[key]
+//   );
+// }
