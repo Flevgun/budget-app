@@ -1,14 +1,14 @@
 import { appData } from '../appData.js';
 
 export function sum() {
-  let monthsavingsValue = document.querySelector(".monthsavings-value"),
+  const monthsavingsValue = document.querySelector(".monthsavings-value"),
     yearsavingsValue = document.querySelector(".yearsavings-value"),
     sumInput = document.querySelector("#sum"),
     percentInput = document.querySelector("#percent");
 
   sumInput.addEventListener("input", () => {
     if (appData.saving == true) {
-      let currentSum = +sumInput.value,
+      const currentSum = +sumInput.value,
         currentPercent = +percentInput.value;
       appData.monthIncome = (currentSum / 100 / 12) * currentPercent;
       appData.yearIncome = (currentSum / 100) * currentPercent;
@@ -18,7 +18,7 @@ export function sum() {
   });
   percentInput.addEventListener("input", () => {
     if (appData.saving == true) {
-      let currentSum = +sumInput.value,
+      const currentSum = +sumInput.value,
         currentPercent = +percentInput.value;
       appData.monthIncome = (currentSum / 100 / 12) * currentPercent;
       appData.yearIncome = (currentSum / 100) * currentPercent;

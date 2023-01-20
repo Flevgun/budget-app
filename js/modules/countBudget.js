@@ -4,7 +4,7 @@ export function countBudget() {
   window.addEventListener("DOMContentLoaded", () => {
     start();
   });
-  let dayBudgetValue = document.querySelector(".daybudget-value"),
+  const dayBudgetValue = document.querySelector(".daybudget-value"),
     levelValue = document.querySelector(".level-value"),
     countBtn = document.querySelector(".count-budget-btn");
 

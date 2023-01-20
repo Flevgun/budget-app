@@ -1,6 +1,6 @@
 import { appData } from "../appData.js";
 export function optionalExpenses() {
-  let optionalExpensesValue = document.querySelector(".optionalexpenses-value"),
+  const optionalExpensesValue = document.querySelector(".optionalexpenses-value"),
     optionalExpensesInputs = document.querySelectorAll(
       ".optionalexpenses-item"
     ),
@@ -8,7 +8,7 @@ export function optionalExpenses() {
 
   optionalExpensesBtn.addEventListener("click", () => {
     for (let i = 0; i < optionalExpensesInputs.length; i++) {
-      let optAnswer = optionalExpensesInputs[i].value;
+      const optAnswer = optionalExpensesInputs[i].value;
       appData.optionalExpenses[i] = optAnswer;
       optionalExpensesValue.textContent += appData.optionalExpenses[i] + " ";
     }

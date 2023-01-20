@@ -1,14 +1,13 @@
-import { appData } from '../appData.js';
+import { appData } from "../appData.js";
 
 export function start() {
-    let money, time;
+  let money, time;
 
-  let startBtn = document.getElementById("start"),
+  const startBtn = document.getElementById("start"),
     budgetValue = document.querySelector(".budget-value"),
     yearValue = document.querySelector(".year-value"),
     monthValue = document.querySelector(".month-value"),
     dayValue = document.querySelector(".day-value");
-
 
   startBtn.addEventListener("click", () => {
     time = prompt("Введите дату в формате YYYY-MM-DD", "");
