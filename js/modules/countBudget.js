@@ -1,9 +1,9 @@
-import {Start} from './start.js'
-import { appData } from '../appData.js';
-export function CountBudget() {
-    window.addEventListener('DOMContentLoaded', () =>{
-        Start()
-    })
+import { start } from "./start.js";
+import { appData } from "../appData.js";
+export function countBudget() {
+  window.addEventListener("DOMContentLoaded", () => {
+    start();
+  });
   let dayBudgetValue = document.querySelector(".daybudget-value"),
     levelValue = document.querySelector(".level-value"),
     countBtn = document.querySelector(".count-budget-btn");
@@ -25,4 +25,4 @@ export function CountBudget() {
       levelValue.textContent = "Произошла ошибка";
     }
   });
-  }
+}

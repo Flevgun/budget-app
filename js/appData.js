@@ -1,5 +1,5 @@
 export let money, time;
-export let appData = {
+export const appData = {
         budget: money,
         expenses: {},
         optionalExpenses: {},

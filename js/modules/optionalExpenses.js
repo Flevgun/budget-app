@@ -1,5 +1,5 @@
 import { appData } from "../appData.js";
-export function OptionalExpenses() {
+export function optionalExpenses() {
   let optionalExpensesValue = document.querySelector(".optionalexpenses-value"),
     optionalExpensesInputs = document.querySelectorAll(
       ".optionalexpenses-item"

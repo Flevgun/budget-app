@@ -1,6 +1,6 @@
 import { appData } from '../appData.js';
 
-export function Expenses() {
+export function expenses() {
   let expensesInputs = document.querySelectorAll(".expenses-item"),
     expensesValue = document.querySelector(".expenses-value"),
     expensesBtn = document.querySelector(".expenses-item-btn");
@@ -9,19 +9,19 @@ export function Expenses() {
     let sum = 0;
 
     for (let i = 0; i < expensesInputs.length; i++) {
-      let a = expensesInputs[i].value;
-      let b = expensesInputs[++i].value;
+      let nameExpenses = expensesInputs[i].value;
+      let sumExpenses = expensesInputs[++i].value;
 
       if (
-        typeof a === "string" &&
-        typeof a != null &&
-        typeof b != null &&
-        a != "" &&
-        b != "" &&
-        a.length < 50
+        typeof nameExpenses === "string" &&
+        typeof nameExpenses != null &&
+        typeof sumExpenses != null &&
+        nameExpenses != "" &&
+        sumExpenses != "" &&
+        nameExpenses.length < 50
       ) {
-        appData.expenses[a] = b;
-        sum += +b;
+        appData.expenses[nameExpenses] = sumExpenses;
+        sum += +sumExpenses;
       } else {
         i = i - 1;
       }

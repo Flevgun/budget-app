@@ -1,6 +1,6 @@
 import { appData } from '../appData.js';
 
-export function Sum() {
+export function sum() {
   let monthsavingsValue = document.querySelector(".monthsavings-value"),
     yearsavingsValue = document.querySelector(".yearsavings-value"),
     sumInput = document.querySelector("#sum"),

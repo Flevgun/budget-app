@@ -1,6 +1,6 @@
 import { appData } from '../appData.js';
 
-export function Start() {
+export function start() {
     let money, time;
 
   let startBtn = document.getElementById("start"),
